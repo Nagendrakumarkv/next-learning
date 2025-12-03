@@ -1,0 +1,299 @@
+⭐ 10-Day React + Next.js Mastery Plan (Basics → Advanced → Project)
+
+🕒 Daily learning time: 2–3 hours
+🛠 Includes theory + coding + mini tasks
+
+DAY 1 — React Revision + Modern React Setup
+Topics
+
+Quick revision of:
+
+Components
+
+Props & State
+
+JSX
+
+Modern Setup:
+
+Vite + React app
+
+Folder structure best practices
+
+React Hooks revision:
+
+useState
+
+useEffect
+
+useRef
+
+Practical
+
+✔ Create a small counter + todo app
+✔ Use useEffect cleanup
+
+DAY 2 — Advanced Hooks (Very Important)
+Topics
+
+useMemo
+
+useCallback
+
+useReducer
+
+Custom hooks
+
+Why re-renders happen
+
+React dev tools profiling
+
+Practical
+
+✔ Create a searchable list
+✔ Optimize it with useMemo + useCallback
+✔ Create custom hook for "useFetch"
+
+DAY 3 — Global State Management
+Topics
+
+Context API (React built-in global store)
+
+Context + useReducer
+
+Modern alternatives:
+
+Zustand
+
+Jotai
+
+Redux Toolkit (if needed)
+
+Practical
+
+✔ Build a global theme context (light/dark)
+✔ Build a small global cart using Context
+
+DAY 4 — React Performance & Architecture
+Topics
+
+React rendering lifecycle
+
+React optimization techniques:
+
+memo()
+
+Lazy loading + Suspense
+
+Code splitting
+
+Folder architecture for large apps
+
+Best practices for reusable components
+
+Error boundaries
+
+Practical
+
+✔ Convert components into reusable UI components
+✔ Implement lazy loading for routes/components
+
+DAY 5 — Routing + Forms + API + Custom Hooks
+Topics
+
+React Router v6
+
+Dynamic Routing
+
+Protected routes
+
+Form handling:
+
+React Hook Form
+
+Yup validation
+
+API calls (Axios + custom hooks)
+
+Practical
+
+✔ Build Login → Dashboard (Protected route)
+✔ Build Form using RHF + Yup
+✔ Use custom hook for API calls
+
+⭐ DAY 6 — Next.js Fundamentals (Start strong)
+Topics
+
+What is Next.js & why it is better than React
+
+Pages Router vs App Router (use App Router)
+
+Folder structure of Next.js 14
+
+Server Components vs Client Components
+
+Layouts, Pages, Routing
+
+Metadata, SEO tags
+
+Practical
+
+✔ Create a Next.js app
+✔ Make Home, About, Contact pages
+✔ Use layout.tsx
+✔ Use server components for fast rendering
+
+DAY 7 — Next.js Advanced Concepts
+Topics
+
+Next.js API Routes
+
+Next.js Server Actions (💥 powerful)
+
+File-based routing (dynamic & nested routes)
+
+Next.js fetch caching strategies:
+
+cache: 'force-cache'
+
+cache: 'no-store'
+
+Image optimization
+
+Middleware
+
+Practical
+
+✔ Build an API route /api/products
+✔ Fetch using server components
+✔ Add middleware for route protection
+
+DAY 8 — Next.js Full-Stack (DB + Auth)
+Topics
+
+Next.js + MongoDB/Postgres
+
+Prisma ORM
+
+Authentication:
+
+NextAuth.js
+
+JWT
+
+Environment Variables
+
+Server Actions for CRUD
+
+Practical
+
+✔ Build user registration/login
+✔ Connect database
+✔ CRUD operations using server actions
+
+⭐ DAY 9 — Real-Time + Deployment
+Topics
+
+Realtime systems:
+
+Pusher
+
+WebSockets
+
+Deployment:
+
+Vercel (best for Next.js)
+
+Render
+
+Environment configuration
+
+Error logging (Sentry)
+
+Performance optimization in Next.js
+
+Practical
+
+✔ Push real-time notification or chat demo
+✔ Deploy the app on Vercel
+✔ Connect database in production
+
+⭐ DAY 10 — Final Project (React + Next Full-Stack)
+Build a full project combining everything:
+🔥 Final Project: E-Commerce or Task Manager App
+
+Includes:
+
+Home page (server components)
+
+Product list (SSR + caching)
+
+Product detail page (dynamic route)
+
+Auth (NextAuth)
+
+Cart (client component + Zustand)
+
+Checkout form (React Hook Form)
+
+Admin dashboard (server actions)
+
+Real-time notifications (Pusher)
+
+Deployment to Vercel
+
+This covers:
+✔ React basics
+✔ React advanced
+✔ Global state
+✔ API integrations
+✔ Next.js routing
+✔ Auth
+✔ Full-stack CRUD
+✔ Performance
+✔ Deployment
+
+🎁 Extra Material
+
+If you want bro, I can also give:
+
+✅ Architecture diagram
+✅ Folder structure
+✅ Daily coding tasks
+✅ GitHub sample repo
+✅ Interview questions (React + Next)
+
+------------------------------------------------------
+
+ReactJS
+
+npm create vite@latest react-day1 --template react
+cd react-day1
+npm install
+npm run 
+
+------------------------------------------------------
+
+> npm create vite@latest
+
+✔ Project name: … react-day1
+✔ Select a framework: › React
+✔ Select a variant: › JavaScript + SWC
+
+Scaffolding project in react-day1...
+Done.
+
+-------------------------------------------------------
+
+Your project runs at:
+👉 http://localhost:5173/
+
+-------------------------------------------------------
+
+NextJS
+
+npx create-next-app@latest nextjs-day6
+cd nextjs-day6
+npm run dev
+
+
