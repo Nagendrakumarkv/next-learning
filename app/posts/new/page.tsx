@@ -12,7 +12,7 @@ export default function NewPostPage() {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
-    formData.append("authorId", session.data?.user?.id || "1"); 
+    formData.append("authorId", String(session.data?.user?.id ?? "1")); 
 
     await createPostAction(formData);
     router.push("/posts");

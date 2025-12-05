@@ -38,8 +38,23 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   ],
-  session: {
-    strategy: "jwt", // 🔥 JWT-based sessions
+  // session: {
+  //   strategy: "jwt", // 🔥 JWT-based sessions
+  // },
+  callbacks: {
+    async jwt({ token, user }) {
+      if (user) {
+        token.id = user.id;
+        token.role = user.role;
+      }
+      return token;
+    },
+
+    async session({ session, token }) {
+      session.user.id = token.id;
+      session.user.role = token.role;
+      return session;
+    },
   },
   pages: {
     signIn: "/", // you can customize later
