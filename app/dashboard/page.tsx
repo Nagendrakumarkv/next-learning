@@ -1,26 +1,21 @@
-"use client";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/src/auth.config";
+import { redirect } from "next/navigation";
+import LogoutButton from "../components/LogoutButton";
 
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+export default async function DashboardPage() {
+  const session = await getServerSession(authOptions);
 
-export default function DashboardPage() {
-  const router = useRouter();
-
-  const handleLogout = () => {
-    // Clear cookie (simple way)
-    document.cookie = "token=; Max-Age=0; path=/;";
-    router.push("/");
-  };
+  if (!session) {
+    redirect("/");
+  }
 
   return (
     <div style={{ padding: 20 }}>
-      <h1>Dashboard (Protected)</h1>
-      <p>You should only see this if you are logged in.</p>
-      <br />
+      <h1>Dashboard</h1>
+      <p>Welcome, {session.user?.name}</p>
 
-      <Link href="/dashboard/settings"> Go to settings</Link>
-      <br/><br/>
-      <button onClick={handleLogout}>Logout</button>
+      <LogoutButton />
     </div>
   );
 }

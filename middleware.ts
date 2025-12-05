@@ -1,19 +1,21 @@
 import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { NextRequest } from "next/server";
 
-export function middleware(request: NextRequest) {
-  const token = request.cookies.get("token")?.value;
+export function middleware(req: NextRequest) {
+  const token = req.cookies.get("next-auth.session-token")?.value ||
+                req.cookies.get("__Secure-next-auth.session-token")?.value;
 
-  // If no token and trying to access /dashboard...
-  if (!token && request.nextUrl.pathname.startsWith("/dashboard")) {
-    return NextResponse.redirect(new URL("/", request.url));
+  if (!token && req.nextUrl.pathname.startsWith("/posts")) {
+    return NextResponse.redirect(new URL("/", req.url));
   }
 
-  // Otherwise allow
+  if (!token && req.nextUrl.pathname.startsWith("/dashboard")) {
+  return NextResponse.redirect(new URL("/", req.url));
+}
+
   return NextResponse.next();
 }
 
-// Apply middleware only to /dashboard and its subpaths
 export const config = {
-  matcher: ["/dashboard/:path*"],
+  matcher: ["/dashboard/:path*", "/posts/:path*"],
 };
